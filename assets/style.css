@@ -5,3 +5,12 @@ body {
 .btn {
     margin: 15px;
 }
+
+.gif-divs {
+    padding: 10px;
+    float: left;
+}
+
+.food-img {
+    float: left;
+}
