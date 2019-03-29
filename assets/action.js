@@ -51,7 +51,13 @@ $(document).ready(function () {
                             // add class to img
                             foodImage.addClass("food-img")
                             // pull src attribute from the property of the results item
-                            foodImage.attr("src", results[i].images.fixed_height_still.url);
+                            foodImage.attr({
+                                "src": results[i].images.original_still.url,
+                                "data-still": results[i].images.fixed_height_still.url,
+                                "data-animate": results[i].images.fixed_height.url,
+                                "data-state": "still",
+                                "class": "gif" // not sure about this line
+                            });
                             // gifDiv.append(p);
                             gifDiv.append(foodImage);
                             // prepend the generated gifDiv to the html div id="gifs-here"
