@@ -5,14 +5,14 @@ $(document).ready(function () {
 
     // (1) dynamically generate buttons from the array above 
     function renderButtons() {
-        $("#btn-append").empty();
+        $("#gifs-here").empty();
 
         for (var i = 0; i < topics.length; i++) {
             var topicButton = $("<button>");
             topicButton.addClass("btn btn-dark");
             topicButton.attr("data-topic", topics[i]);
             topicButton.text(topics[i]);
-            $("#btn-append").append(topicButton);
+            $("#gifs-here").prepend(topicButton);
         }
 
     };
@@ -67,7 +67,7 @@ $(document).ready(function () {
                             // gifDiv.append(p);
                             gifDiv.append(foodImage);
                             // prepend the generated gifDiv to the html div id="gifs-here"
-                            $("#gifs-here").prepend(gifDiv);
+                            $("#gifs-under").prepend(gifDiv);
                         }
                     }
                 });
