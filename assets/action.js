@@ -42,11 +42,11 @@ $(document).ready(function () {
                     for (var i = 0; i < results.length; i++) {
                         // only print appropriately rated gifs
                         if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
-                            
+
                             // variables to hold data attributes of items
                             var stillSrc = results[i].images.fixed_height_still.url;
                             var animatedSrc = results[i].images.fixed_height.url;
-                            
+
                             // create a div for the gifs
                             var gifDiv = $("<div>");
                             // add a class to gifDiv
@@ -89,5 +89,20 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     }
+
+    // function to push input from the form
+    $("#add-gif").on("click", function (event) {
+        event.preventDefault();
+
+        var newGif = $("#gif-input").val().trim();
+        topics.push(newGif);
+        $("#gif-input").val('');
+        
+        console.log(newGif);
+
+        renderButtons();
+        renderGifs();
+    });
+
 
 }) // everything inside this closer

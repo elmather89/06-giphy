@@ -2,6 +2,11 @@ body {
     background-image: url("../assets/images/food.png");
 }
 
+.clearfix {
+    margin: 0 auto;
+    overflow: auto;
+}
+
 .btn {
     margin: 15px;
 }
