@@ -43,7 +43,7 @@ $(document).ready(function () {
                     // loop every result response 
                     for (var i = 0; i < results.length; i++) {
                         // only print appropriately rated gifs
-                        if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+                        if (results[i].rating !== "r") {
 
                             // variables to hold data attributes of items
                             var stillSrc = results[i].images.fixed_height_still.url;
