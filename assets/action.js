@@ -38,6 +38,8 @@ $(document).ready(function () {
                 .then(function (response) {
                     var results = response.data;
 
+                    console.log(response);
+
                     // loop every result response 
                     for (var i = 0; i < results.length; i++) {
                         // only print appropriately rated gifs

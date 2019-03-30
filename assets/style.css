@@ -1,5 +1,6 @@
 body {
     background-image: url("../assets/images/food.png");
+    font-family: 'Bree Serif', serif;
 }
 
 .clearfix {
@@ -27,4 +28,9 @@ body {
     padding: 10px;
     display: inline-block;
     border-radius: 4px;
+}
+
+.jumbotron {
+    max-height: 100px;
+    background-color: cornflowerblue;
 }
