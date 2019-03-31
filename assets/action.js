@@ -48,9 +48,12 @@ $(document).ready(function () {
                             // variables to hold data attributes of items
                             var stillSrc = results[i].images.fixed_height_still.url;
                             var animatedSrc = results[i].images.fixed_height.url;
+                            var rating = results[i].rating; // ==========
 
                             // create a div for the gifs
                             var gifDiv = $("<div>");
+                            // create div for ratings <p>
+                            var ratingP = $("<p>"); // ===========
                             // add a class to gifDiv
                             gifDiv.addClass("gif-divs");
                             // create an image tag
@@ -70,6 +73,9 @@ $(document).ready(function () {
                             gifDiv.append(foodImage);
                             // prepend the generated gifDiv to the html div id="gifs-here"
                             $("#gifs-under").prepend(gifDiv);
+
+                            // append rating
+                            ratingP.append(); // =========
                         }
                     }
                 });
