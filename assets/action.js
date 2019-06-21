@@ -1,5 +1,12 @@
 // on doc ready 
 $(document).ready(function () {
+    // cors issue
+    jQuery.ajaxPrefilter(function (options) {
+        if (options.crossDomain && jQuery.support.cors) {
+            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+    });
+
     // array of strings
     var topics = ["hamburger", "taco", "sandwich", "ice cream", "bacon"];
 
@@ -27,6 +34,8 @@ $(document).ready(function () {
             // construct search url
             var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
                 food + "&api_key=kypnXslCOr8dWGPP3FqDkamXoM81JOG7&limit=10";
+                console.log(queryURL);
+                
 
             // ajax GET
             $.ajax({
@@ -105,7 +114,7 @@ $(document).ready(function () {
         var newGif = $("#gif-input").val().trim();
         topics.push(newGif);
         $("#gif-input").val('');
-        
+
         console.log(newGif);
 
         renderButtons();
