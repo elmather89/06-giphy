@@ -1,5 +1,6 @@
 // on doc ready 
 $(document).ready(function () {
+
     // cors issue
     jQuery.ajaxPrefilter(function (options) {
         if (options.crossDomain && jQuery.support.cors) {
@@ -16,7 +17,7 @@ $(document).ready(function () {
 
         for (var i = 0; i < topics.length; i++) {
             var topicButton = $("<button>");
-            topicButton.addClass("btn btn-dark");
+            topicButton.addClass("gif-btn btn-dark");
             topicButton.attr("data-topic", topics[i]);
             topicButton.text(topics[i]);
             $("#gifs-here").prepend(topicButton);
@@ -28,14 +29,20 @@ $(document).ready(function () {
     function renderGifs() {
         // (2) when user clicks on the button,
         // retrieve 10 static gif images
-        $("button").on("click", function () {
+        $(".gif-btn").on("click", function () {
+
+            // modal trigger
+            setTimeout(function () {
+                $('#helpModal').modal();
+            }, 1000);
+
             // set a variable to capture the data-topic text
             var food = $(this).attr("data-topic");
             // construct search url
             var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-                food + "&api_key=kypnXslCOr8dWGPP3FqDkamXoM81JOG7&limit=10";
-                console.log(queryURL);
-                
+                food + "&api_key=kypnXslCOr8dWGPP3FqDkamXoM81JOG7&limit=30";
+            console.log(queryURL);
+
 
             // ajax GET
             $.ajax({
