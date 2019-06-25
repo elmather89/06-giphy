@@ -1,3 +1,11 @@
-# 06-giphy
+# Gif-Generating App
+This web page uses the Giphy API to dynamically generate gifs of your choosing.
 
-# View the published app here: https://elmather89.github.io/06-giphy/
+### Built with:
+* Giphy API
+* Javascript / jQuery
+* Ajax
+* HTML & Bootstrap CSS
+
+### Published site:
+![](https://elmather89.github.io/06-giphy/)
