@@ -7,5 +7,4 @@ This web page uses the Giphy API to dynamically generate gifs of your choosing.
 * Ajax
 * HTML & Bootstrap CSS
 
-### Published site:
-![](https://elmather89.github.io/06-giphy/)
+### View the published app here: [Giphy page](https://elmather89.github.io/06-giphy/)
